@@ -1,34 +1,22 @@
 # Photobooth DIY
 
-Here you will find code for my wedding photobooth made with a Raspberry pi under Raspbian.
-It can be optimised but I didn't have time to do.
 
-You can see all steps to make a photobooth on my instructables: https://www.instructables.com/id/Wedding-Event-Photobooth/
+*Visit the original repo where this was forked from: [sabat54's repos](https://github.com/sabat54i/photoboothdiy)*
 
-Requires for the code works:
+This was a cool DIY project, that allowed my to save a few bucks and have a lot of fun in the process.
 
-1. Enable Camera module
+___
+### **Material and cost:**
+My old raspberry pi was not in a good shape so I bought a **new RPI-4**, and I also bought a **used Mitsubishi CP-M1 photoprinter**. I used a SLR camera **Canon EOS450** and a **HP 22es monitor**, which I already had. I built the whole structure in wood which was great fun. 
 
-To enable the camera module there is a little configuration to do: https://www.raspberrypi.org/documentation/usage/camera/
+**Overall the project cost around 500€**, including two rolls of photos that allow me to print almost 1500 photos. A professional service that rents photobooths would have cost around the same price, but this way I also got to keep the printer and the raspberry pi. We also ended up using the leftover photoroll to print more pictures to all the guests and send them via mail :)
 
-2. Prepare Raspbian with all librairies you need
+___
+I adapted the original repo for my wedding. It's in many ways similar to the original but since I was changing the printer model and the way the photos and layout were going to look like, I had to add a few features, like debug mode and dynamic shaping of photos to the size of paper. Here's a sample of a final test picture I took before the wedding to make sure all was okay: 
+<p align="center">
+<img src="last_photo_example.jpg" style="transform:rotate(90deg); width:250px; text-align:center" alt="test_phto" >
+</p>
 
-* Install Python (because program is made with Python), you will find how to do here: https://www.raspberrypi.org/documentation/linux/software/python.md
+___
 
-* Install Pygame (library for python graphical interface), more information here: https://www.packtpub.com/mapt/book/hardware_and_creative/9781785285066/3/ch03lvl1sec19/installing-pygame
-
-* Install Picamera (library for the camera module of Raspberry pi): https://www.raspberrypi.org/documentation/linux/software/python.md
-
-* Install Python module RPI.GPIO (library for control Raspberry GPIO for the arcade button): https://learn.adafruit.com/playing-sounds-and-using-buttons-with-raspberry-pi/install-python-module-rpi-dot-gpio
-
-* Install CUPS to add a printer on Raspbian, you will find how to do here: https://www.howtogeek.com/169679/how-to-add-a-printer-to-your-raspberry-pi-or-other-linux-computer/
-
-* Install PIL (library for images on Python): https://www.pkimber.net/howto/python/modules/pillow.html
-
-To run it you just have to launch a terminal, navagate to the program folder and type "sudo python camera.py"
-
-If you want to test it without a button wire on GPIO Pin 25 of the raspberry, you can push down arrow of your keyboard.
-
-Finally, I wanted to run the program at startup of the raspberry pi so I followed this tuto https://www.simplified.guide/linux/automatically-run-program-on-startup
-
-The script which launch at startup is on the Github: photobooth-script.sh 
+For more info head to the [instructables page](https://www.instructables.com/Wedding-Event-Photobooth/), where there is a great example on how to set everything up.
